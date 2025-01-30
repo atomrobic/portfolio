@@ -67,9 +67,11 @@ const AvatarCustomStyles = ({ resumeLink }) => {
                 👋 Hey, I'm Akhil
               </span>
               <p className="text-gray-700 text-lg leading-relaxed font-casual animate-fade-in-up" style={{ fontFamily: 'Poppins, sans-serif' }}>
-                I'm a full-stack dev who loves building stuff that lives on the internet. 
-                My playground includes everything from crafting smooth UI experiences with 
-                React ⚛️ to wrestling with backend dragons in Node.js 🐉. Currently obsessed with:
+              I am a tech enthusiast with a passion for creating innovative projects.
+              I am committed to continuous learning and am eager to apply my skills 
+              in a dynamic role where I can contribute to cutting-edge technology and
+              drive measurable results.⚛️ 
+              
                 <Header/>
               </p>
 
