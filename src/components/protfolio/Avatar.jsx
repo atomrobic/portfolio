@@ -58,7 +58,7 @@ const AvatarCustomStyles = ({ resumeLink }) => {
           {/* Avatar Section */}
           <div className="flex flex-col items-center w-full max-w-screen-xl">
             <Avatar
-              src="public/akhil.jpg"
+              src="https://ibb.co/hF9yKFbh"
               className="avatar-custom w-40 h-40 lg:w-50 lg:h-48 mb-6"
             />
             {/* Enhanced Text Section */}
