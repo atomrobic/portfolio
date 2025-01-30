@@ -1,0 +1,63 @@
+Avatar Custom Styles
+.avatar-custom {
+  border-radius: 50%;  /* Circular shape */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);  /* Subtle shadow for the avatar */
+  transition: all 0.7s ease;  /* Smooth transition for hover effects */
+}
+
+.avatar-custom:hover {
+  transform: scale(1.1);  /* Slightly enlarge avatar on hover */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);  /* Stronger shadow on hover */
+}
+
+@media (max-width: 640px) {
+  .avatar-custom {
+    width: 50px;
+    height: 80px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .avatar-custom {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .avatar-custom {
+    width: 150px;
+    height: 150px;
+  }
+}
+.avatar-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.avatar-custom {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.avatar-custom:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.avatar-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+.avatar-wrapper:hover .avatar-content {
+  opacity: 1;
+}

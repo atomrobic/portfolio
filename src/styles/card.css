@@ -1,0 +1,20 @@
+.meta-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .hover-slidebar {
+    width: 0;
+    height: 2px;
+    background-color: #1890ff;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    transition: width 0.3s ease;
+  }
+  
+  .meta-container:hover .hover-slidebar {
+    width: 100%;
+  }
+  

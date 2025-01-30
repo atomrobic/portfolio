@@ -1,0 +1,29 @@
+/* Default styles for larger screens */
+body {
+    font-size: 16px;
+    padding: 20px;
+  }
+  
+  /* Mobile-first styles */
+  @media (max-width: 768px) {
+    body {
+      font-size: 14px;
+      padding: 10px;
+    }
+  
+    .container {
+      display: block;
+      width: 100%;
+      padding: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    body {
+      font-size: 12px;
+    }
+    .container {
+      padding: 5px;
+    }
+  }
+  

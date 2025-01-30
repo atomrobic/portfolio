@@ -1,0 +1,90 @@
+/* Parent Container Styling */
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem; /* For small screens */
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    gap: 1rem;
+    height: 100%;
+  }
+  /* Text Section Styling */
+.text-section {
+    text-align: center;
+    margin-top: 1rem;
+    color: #2c3e50;
+  }
+  
+  .text-section span {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .text-section p {
+    font-size: 1rem;
+    color: #666;
+    margin: 0.5rem 0;
+  }
+  
+ 
+  
+  @media (min-width: 1024px) {
+    .flex-container {
+      flex-direction: row;
+      padding: 2.25rem;
+      gap: 1rem;
+      height: 400px;
+    }
+  }
+  /* Mobile Phone Only Styling */
+@media screen and (max-width: 480px) {
+    .text-section {
+      text-align: left;
+      padding: 1rem;
+    }
+  
+    .text-section span {
+      font-size: 1.5rem;
+    }
+  
+    .text-section p {
+      font-size: 0.9rem;
+    }
+  
+    .custom-button {
+      display: block;
+      width: 100%;
+      font-size: 0.9rem;
+      padding: 0.5rem 1rem;
+      text-align: center;
+    }
+  
+    .avatar-custom {
+      width: 60px;
+      height: 60px;
+    }
+  
+    /* Additional mobile-specific adjustments */
+    .flex-container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+/* Hide the left drawer on mobile */
+@media (max-width: 768px) {
+  .mobile-hidden {
+    display: none !important;
+  }
+
+  .drawer-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+  }
+}
