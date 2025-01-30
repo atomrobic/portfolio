@@ -1,11 +1,11 @@
 import React, { useState } from 'react';  // Make sure useState is imported
 import { Button, Drawer, Card, Avatar, Carousel } from 'antd';
-import { GithubOutlined, LinkedinOutlined, MenuOutlined } from '@ant-design/icons';
+import { GithubOutlined, LinkedinOutlined } from '@ant-design/icons';
 import Navbar from './Navbar';
 import { projects } from '../dummydata/datapro';
 import '../../styles/AvatarStyles.css';
 import '../../styles/main.css';
-import Resume from './Resume'; // Import the Resume component
+// import Resume from './Resume'; // Import the Resume component
 import CarsolCard from "./CarsolCard";  // case-sensitive import
 import Header from "./Header";  // case-sensitive import
 
@@ -92,7 +92,7 @@ const AvatarCustomStyles = ({ resumeLink }) => {
               </Button>
 
               {/* Resume Link Section */}
-              <Resume resumeLink={resumeLink} className="lg:hidden" />
+              {/* <Resume resumeLink={resumeLink} className="lg:hidden" /> */}
 
               {/* Animated Social Icons */}
               <div className="flex items-center mt-4 space-x-6 justify-center lg:justify-start">
