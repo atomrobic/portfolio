@@ -57,8 +57,12 @@ const AvatarCustomStyles = ({ resumeLink }) => {
           
           {/* Avatar Section */}
           <div className="flex flex-col items-center w-full max-w-screen-xl">
-          <Avatar
+          {/* <Avatar
   src="/akhil.jpg"  // Corrected path
+  className="avatar-custom w-40 h-40 lg:w-50 lg:h-48 mb-6"
+/> */}
+<Avatar
+  src="/akhil.jpg"  // Replace with your new image path
   className="avatar-custom w-40 h-40 lg:w-50 lg:h-48 mb-6"
 />
 
