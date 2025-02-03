@@ -100,31 +100,29 @@ const AvatarCustomStyles = () => {
                 </Popover>
               </div>
 
-             {/* Slider Section */}
-<div className="mt-8">
-  <h2 className="text-1xl font-bold text-white mb-4">
+{/* Slider Section */}
+<div className="mt-8 p-4">
+  <h2 className="text-lg md:text-xl font-bold text-white mb-4">
     Control Slider to Unlock Contact Info 🎚️
   </h2>
-  <Slider
-    defaultValue={0}
-    max={100}
-    value={sliderValue}
-    onChange={setSliderValue}
-    tooltip={{ open: true }}
-  />
+  <div className="w-full md:w-1/2 mx-auto">
+    <Slider
+      defaultValue={0}
+      max={100}
+      value={sliderValue}
+      onChange={setSliderValue}
+      tooltip={{ open: true }}
+    />
+  </div>
   {sliderValue === 100 && (
-    <div className="text-green-400 text-xl mt-4 font-semibold">
+    <div className="text-green-400 text-lg md:text-xl mt-4 font-semibold">
       <div className="flex items-center space-x-2">
-        <i className="text-purple-400">
-          <span className="material-icons">email</span>
-        </i>
+        <i className="text-purple-400 material-icons">email</i>
         <span className="text-purple-200">Email:</span> 
-        <span className="text-white">akhilappuyeroor@gmail.com</span>
+        <span className="text-white break-words">akhilappuyeroor@gmail.com</span>
       </div>
       <div className="flex items-center space-x-2 mt-2">
-        <i className="text-purple-400">
-          <span className="material-icons">phone</span>
-        </i>
+        <i className="text-purple-400 material-icons">phone</i>
         <span className="text-purple-200">Contact Number:</span> 
         <span className="text-white">9544552818</span>
       </div>
