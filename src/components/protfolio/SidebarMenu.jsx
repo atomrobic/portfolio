@@ -1,79 +1,53 @@
-// import React, { useState } from 'react';
-// import { AppstoreOutlined, MailOutlined, SettingOutlined } from '@ant-design/icons';
-// import { Menu, Switch } from 'antd';
+import React, { useState } from "react";
+import "./Navbar.css"; // Import the CSS file
 
-// const items = [
-//   {
-//     key: 'sub1',
-//     label: 'Navigation One',
-//     icon: <MailOutlined />,
-//     children: [
-//       { key: '1', label: 'Option 1' },
-//       { key: '2', label: 'Option 2' },
-//       { key: '3', label: 'Option 3' },
-//       { key: '4', label: 'Option 4' },
-//     ],
-//   },
-//   {
-//     key: 'sub2',
-//     label: 'Navigation Two',
-//     icon: <AppstoreOutlined />,
-//     children: [
-//       { key: '5', label: 'Option 5' },
-//       { key: '6', label: 'Option 6' },
-//       {
-//         key: 'sub3',
-//         label: 'Submenu',
-//         children: [
-//           { key: '7', label: 'Option 7' },
-//           { key: '8', label: 'Option 8' },
-//         ],
-//       },
-//     ],
-//   },
-//   {
-//     key: 'sub4',
-//     label: 'Navigation Three',
-//     icon: <SettingOutlined />,
-//     children: [
-//       { key: '9', label: 'Option 9' },
-//       { key: '10', label: 'Option 10' },
-//       { key: '11', label: 'Option 11' },
-//       { key: '12', label: 'Option 12' },
-//     ],
-//   },
-// ];
+const Navbar = () => {
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-// const SidebarMenu = ({ theme, setTheme, current, setCurrent }) => {
-//   const changeTheme = (value) => {
-//     setTheme(value ? 'dark' : 'light');
-//   };
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!isMobileMenuOpen);
+  };
 
-//   const onClick = (e) => {
-//     setCurrent(e.key);
-//   };
+  return (
+    <nav className="navbar">
+      <div className="navbar-container">
+        <a href="#home" className="navbar-logo">
+          My Portfolio
+        </a>
+        <div
+          className={`navbar-toggle ${isMobileMenuOpen ? "active" : ""}`}
+          id="mobile-menu"
+          onClick={toggleMobileMenu}
+        >
+          <span className="bar"></span>
+          <span className="bar"></span>
+          <span className="bar"></span>
+        </div>
+        <ul className={`navbar-menu ${isMobileMenuOpen ? "active" : ""}`}>
+          <li className="navbar-item">
+            <a href="#home" className="navbar-links" onClick={toggleMobileMenu}>
+              Home
+            </a>
+          </li>
+          <li className="navbar-item">
+            <a href="#about" className="navbar-links" onClick={toggleMobileMenu}>
+              About
+            </a>
+          </li>
+          <li className="navbar-item">
+            <a href="#projects" className="navbar-links" onClick={toggleMobileMenu}>
+              Projects
+            </a>
+          </li>
+          <li className="navbar-item">
+            <a href="#contact" className="navbar-links" onClick={toggleMobileMenu}>
+              Contact
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  );
+};
 
-//   return (
-//     <div style={{ width: '256px', marginTop: '230px' }}>
-//       <Switch
-//         checked={theme === 'dark'}
-//         onChange={changeTheme}
-//         checkedChildren="Dark"
-//         unCheckedChildren="Light"
-//       />
-//       <br />
-//       <br />
-//       <Menu
-//         theme={theme}
-//         onClick={onClick}
-//         style={{ width: 256 }}
-//         defaultOpenKeys={['sub1']}
-//         selectedKeys={[current]}
-//         mode="inline"
-//         items={items}
-//       />
-//     </div>
-//   );
-// };
-
-// export default SidebarMenu;
+export default Navbar;

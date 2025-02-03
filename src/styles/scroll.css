@@ -1,0 +1,20 @@
+@media (max-width: 768px) {
+  .education-card {
+    transition: transform 4s ease, opacity 1s ease;
+    transform: translateX(700%);
+    opacity: 0;
+  }
+}
+/* Tailwind CSS-compatible style */
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+}
+
+.blink-light {
+  animation: blink 1s infinite;
+}

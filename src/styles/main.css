@@ -1,90 +1,197 @@
-/* Parent Container Styling */
-.flex-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem; /* For small screens */
-    background-color: white;
-    border-radius: 1rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    gap: 1rem;
-    height: 100%;
-  }
-  /* Text Section Styling */
-.text-section {
-    text-align: center;
-    margin-top: 1rem;
-    color: #2c3e50;
-  }
-  
-  .text-section span {
-    font-size: 1.75rem;
-    font-weight: bold;
-    color: #333;
-  }
-  
-  .text-section p {
-    font-size: 1rem;
-    color: #666;
-    margin: 0.5rem 0;
-  }
-  
- 
-  
-  @media (min-width: 1024px) {
-    .flex-container {
-      flex-direction: row;
-      padding: 2.25rem;
-      gap: 1rem;
-      height: 400px;
-    }
-  }
-  /* Mobile Phone Only Styling */
-@media screen and (max-width: 480px) {
-    .text-section {
-      text-align: left;
-      padding: 1rem;
-    }
-  
-    .text-section span {
-      font-size: 1.5rem;
-    }
-  
-    .text-section p {
-      font-size: 0.9rem;
-    }
-  
-    .custom-button {
-      display: block;
-      width: 100%;
-      font-size: 0.9rem;
-      padding: 0.5rem 1rem;
-      text-align: center;
-    }
-  
-    .avatar-custom {
-      width: 60px;
-      height: 60px;
-    }
-  
-    /* Additional mobile-specific adjustments */
-    .flex-container {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  }
-/* Hide the left drawer on mobile */
+body {
+  width: 100vw;
+  background-color: #1D1D1D;
+  margin: 0;
+  font-family: helvetica;
+}
+
+.about {
+  position: fixed;
+  z-index: 10;
+  bottom: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  transition: all 0.2s ease;
+}
+
+.bg_links {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(#fff, 0.2);
+  border-radius: 100%;
+  backdrop-filter: blur(5px);
+  position: absolute;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  z-index: 9;
+  background-image: url(https://rafaelalucas91.github.io/assets/codepen/logo_white.svg);
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: 10px 7px;
+  opacity: 0.9;
+  transition: all 1s 0.2s ease;
+  bottom: 0;
+  right: 0;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 10px;
+}
+
+.card {
+  width: 40%; /* Smaller width for 4 cards in a row */
+  height: 150px; /* Adjust height to match smaller card */
+  background-color: #393744;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.24);
+  border: 2px solid rgba(7, 7, 7, 0.12);
+  font-size: 16px;
+  transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.icon {
+  margin: 0 auto;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(90deg, #ae1c1c 0%, #FF4848 40%, rgba(0, 0, 0, 0.28) 60%);
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  transition: all 0.8s ease;
+  background-position: 0px;
+  background-size: 200px;
+}
+
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+.card .title {
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  margin-top: 10px;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.card .text {
+  width: 80%;
+  margin: 0 auto;
+  font-size: 13px;
+  text-align: center;
+  margin-top: 10px;
+  color: white;
+  font-weight: 200;
+  letter-spacing: 2px;
+  opacity: 0;
+  max-height: 0;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  height: 155px;
+}
+
+.card:hover .text {
+  opacity: 1;
+  max-height: 10px;
+}
+
+.card:hover .icon {
+  background-position: -120px;
+}
+
+.card:hover .icon i {
+  background: linear-gradient(90deg, #f9f7f7, #cab8b8);
+  -webkit-text-fill-color: transparent;
+}
+.skills-heading {
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.project-card {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.project-card.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
 @media (max-width: 768px) {
-  .mobile-hidden {
-    display: none !important;
+  .content {
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
   }
 
-  .drawer-left {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1000;
+  .card {
+    padding: 15px;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+
+  .text {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    grid-template-columns: repeat(2, 1fr); /* Keep two columns on very small screens */
+    gap: 8px;
+  }
+
+  .skills-heading {
+    font-size: 1.5rem;
+  }
+
+  .card {
+    padding: 10px;
+  }
+
+  .icon {
+    font-size: 30px;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+
+  .text {
+    font-size: 0.75rem;
   }
 }
