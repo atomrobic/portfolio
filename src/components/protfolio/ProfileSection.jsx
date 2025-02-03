@@ -102,7 +102,7 @@ const AvatarCustomStyles = () => {
 
 {/* Slider Section */}
 <div className="mt-8 p-4">
-  <h2 className="text-lg md:text-xl font-bold text-white mb-4">
+  <h2 className="text-base md:text-lg font-bold text-white mb-4 text-center">
     Control Slider to Unlock Contact Info 🎚️
   </h2>
   <div className="w-full md:w-1/2 mx-auto">
@@ -115,22 +115,21 @@ const AvatarCustomStyles = () => {
     />
   </div>
   {sliderValue === 100 && (
-    <div className="text-green-400 text-lg md:text-xl mt-4 font-semibold">
+    <div className="text-green-400 text-sm md:text-lg mt-4 font-semibold space-y-2">
       <div className="flex items-center space-x-2">
-        <i className="text-purple-400 material-icons">email</i>
+        <i className="text-purple-400 material-icons text-xl md:text-2xl">email</i>
         <span className="text-purple-200">Email:</span> 
         <span className="text-white break-words">akhilappuyeroor@gmail.com</span>
       </div>
       <div className="flex items-center space-x-2 mt-2">
-        <i className="text-purple-400 material-icons">phone</i>
+        <i className="text-purple-400 material-icons text-xl md:text-2xl">phone</i>
         <span className="text-purple-200">Contact Number:</span> 
         <span className="text-white">9544552818</span>
       </div>
     </div>
   )}
+</div>
 
-
-              </div>
             </div>
           </div>
         </div>
