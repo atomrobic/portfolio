@@ -86,7 +86,7 @@
     .navbar-menu {
       display: none;
       flex-direction: column;
-      width: 100%;
+      width: 50%;
       text-align: center;
       background-color: #fff;
       position: absolute;

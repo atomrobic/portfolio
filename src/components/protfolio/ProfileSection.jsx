@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Avatar, Popover, Spin, Progress, Slider } from 'antd';
-import { GithubOutlined, LinkedinOutlined, DownOutlined } from '@ant-design/icons';
+import { GithubOutlined, LinkedinOutlined, DownOutlined, PhoneOutlined } from '@ant-design/icons';
 import '../../styles/main.css';
 
 const AvatarCustomStyles = () => {
@@ -23,7 +23,7 @@ const AvatarCustomStyles = () => {
         setLoading(false);
         const link = document.createElement('a');
         link.href = resumeLink;
-        link.download = 'public/Akhil.a...pdf';
+        link.download = 'Akhil_Resume.pdf';
         link.click();
       }
     }, 100);
@@ -80,8 +80,22 @@ const AvatarCustomStyles = () => {
               </p>
 
               <div className="mt-4 flex items-center space-x-6 justify-center">
-                <GithubOutlined className="text-3xl text-gray-400 hover:text-white hover:scale-125 transition-transform cursor-pointer" aria-label="GitHub" />
-                <LinkedinOutlined className="text-3xl text-gray-400 hover:text-white hover:scale-125 transition-transform cursor-pointer" aria-label="LinkedIn" />
+                <a 
+                  href="https://github.com/atomrobic" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  aria-label="GitHub"
+                >
+                  <GithubOutlined className="text-3xl text-gray-400 hover:text-white hover:scale-125 transition-transform cursor-pointer" />
+                </a>
+                <a 
+                  href="https://www.linkedin.com/in/akhil-a-7186052b5/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                >
+                  <LinkedinOutlined className="text-3xl text-gray-400 hover:text-white hover:scale-125 transition-transform cursor-pointer" />
+                </a>
               </div>
 
               <div className="mt-8 flex justify-center">
@@ -119,10 +133,11 @@ const AvatarCustomStyles = () => {
                 {sliderValue === 100 && (
                   <div className="flex justify-center mt-4">
                     <Button
-                      onClick={() => setShowDetails(!showDetails)}
-                      className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700"
+                      className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 flex items-center justify-center"
+                      aria-label="Contact"
+                      onClick={() => setShowDetails(true)}
                     >
-                      {showDetails ? 'Hide Details' : 'Show Details'}
+                      <PhoneOutlined />
                     </Button>
                   </div>
                 )}
@@ -130,12 +145,10 @@ const AvatarCustomStyles = () => {
                 {showDetails && (
                   <div className="text-green-400 text-sm md:text-lg mt-4 font-semibold space-y-2">
                     <div className="flex items-center space-x-2">
-                      <i className="text-purple-400 material-icons text-xl md:text-2xl">email</i>
                       <span className="text-purple-200">Email:</span>
                       <span className="text-white break-words">akhilappuyeroor@gmail.com</span>
                     </div>
                     <div className="flex items-center space-x-2 mt-2">
-                      <i className="text-purple-400 material-icons text-xl md:text-2xl">phone</i>
                       <span className="text-purple-200">Contact Number:</span>
                       <span className="text-white">9544552818</span>
                     </div>
