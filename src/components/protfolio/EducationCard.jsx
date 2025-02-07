@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef } from 'react';
 import { FaGraduationCap } from 'react-icons/fa';
 import '../../styles/scroll.css';
@@ -41,10 +42,12 @@ const EducationCard = ({ institution, degree, years, description, isLast }) => {
       {/* Content Card */}
       <div
         ref={cardRef}
-        className="bg-gray-800 shadow-lg rounded-xl p-6 transition-all duration-1000 ease-out"
+        className={`bg-gray-800 shadow-lg rounded-xl p-6 transition-all duration-1000 ease-out ${
+          isLast ? 'border-4 border-red-500 animated-border' : ''
+        }`}
         style={{
           opacity: 0,
-          transform: 'translateY(20px)',
+          transform: 'translateY(10px)',
         }}
       >
         <h3 className="text-2xl font-semibold text-white">{institution}</h3>

@@ -3,22 +3,26 @@ import EducationCard from './EducationCard';
 
 const educationData = [
   {
-    institution: 'Harvard University',
-    degree: 'Bachelor of Science in Computer Science',
+    institution: 'THSS Thadicadu',
+    degree: 'High School ',
     years: '2015 - 2019',
-    description: 'Focused on software development and data science.',
   },
   {
-    institution: 'MIT',
-    degree: 'Master of Artificial Intelligence',
+    institution: 'Vishwabarathy college (MIT)',
+    degree: 'B.A History',
     years: '2019 - 2021',
-    description: 'Specialized in machine learning algorithms.',
   },
   {
-    institution: 'Stanford University',
-    degree: 'Ph.D. in Robotics',
-    years: '2021 - 2024',
-    description: 'Research focused on autonomous systems.',
+    institution: 'Masupstack',
+    degree: 'diploma in Web development',
+    years: '2024 - 2025',
+    description: 'Python react & django developer.',
+  },
+  {
+    institution: 'Freelancer (full stack)',
+    degree: 'diploma in Web development',
+    years: '2024 - 2025',
+    description: 'Python react & django developer.',
   },
 ];
 

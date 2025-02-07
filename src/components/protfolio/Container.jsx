@@ -13,11 +13,11 @@ const Container = () => {
       <Navbar />
 
       {/* Main Layout */}
-      <div className="min-h-screen bg-black text-white p-2">
+      <div className="min-h-screen bg-black text-white p-1">
         {/* Sidebar and Main Content */}
         <div className="flex flex-col lg:flex-row mt-8 gap-5">
           {/* Sidebar Section */}
-          <aside className="bg-black-800 p-4 rounded-lg shadow-md w-full lg:w-4/ h-auto lg:h-auto">
+          <aside className="bg-black-800 p-1 rounded-lg shadow-md w-full lg:w-4/ h-auto lg:h-auto">
             <ProfileSection />
 
             {/* Card Container Below Sidebar */}
@@ -49,13 +49,7 @@ const Container = () => {
             </section>
 
             {/* New Section Below EducationCard */}
-            <section className="mt-8 bg-gray-800 p-6 rounded-lg shadow-md">
-              <h3 className="text-2xl font-semibold text-blue-600 mb-4">New Section</h3>
-              <p className="text-gray-300">This is a new section that you can customize further. Add content like text, images, or even other components.</p>
-              <div className="mt-4">
-                <p className="text-gray-400">This section can be used to add any additional information, such as articles, a contact form, or links to social media.</p>
-              </div>
-            </section>
+          
           </main>
         </div>
 

@@ -27,7 +27,7 @@
   transform: rotateY(360deg);
 }
 
-.fade-in-text {
+/* .fade-in-text {
   animation: fadeIn 2s ease-out forwards;
   opacity: 0;
 }
@@ -39,4 +39,14 @@
   100% {
     opacity: 1;
   }
+} */
+.project-card {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.project-card.fade-in {
+  opacity: 1;
+  transform: translateY(0);
 }

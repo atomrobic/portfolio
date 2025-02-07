@@ -14,11 +14,11 @@ const Projects = () => {
           if (entry.isIntersecting) {
             entry.target.classList.add('fade-in');
           } else {
-            entry.target.classList.remove('fade-in'); // Optional: to remove fade-in when out of view
+            entry.target.classList.remove('fade-in');
           }
         });
       },
-      { threshold: 0.2 }
+      { threshold: 0.5}
     );
 
     cardRefs.current.forEach((card) => {
@@ -38,17 +38,25 @@ const Projects = () => {
         <Card
           ref={(el) => (cardRefs.current[index] = el)}
           key={project.id}
-          className="project-card opacity-0" /* Initially invisible */
+          className="project-card opacity-0"
           hoverable
           cover={
-            <iframe
-              className="w-full h-[250px] rounded-t-2xl"
-              src={project.videoUrl}
-              title={`${project.name} video`}
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
+            project.videoUrl ? (
+              <iframe
+                className="w-full h-[250px] rounded-t-2xl"
+                src={project.videoUrl}
+                title={`${project.name} video`}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            ) : (
+              <img
+                src={project.coverPhoto}
+                alt={`${project.name} cover`}
+                className="w-full h-[250px] object-cover rounded-t-2xl"
+              />
+            )
           }
         >
           <div className="flex flex-col justify-between h-full">

@@ -18,3 +18,17 @@
 .blink-light {
   animation: blink 1s infinite;
 }
+.animated-border {
+  animation: border-move 1.5s infinite alternate;
+}
+
+@keyframes border-move {
+  0% {
+    border-color: red;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+  }
+  100% {
+    border-color: rgba(255, 0, 0, 0.5);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 1);
+  }
+}

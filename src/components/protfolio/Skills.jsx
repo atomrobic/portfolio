@@ -76,14 +76,14 @@ const Skills = () => {
     <div>
       <h2 className="skills-heading">Skills</h2>
       <div className="content">
-        <CardComponent icon={FaHtml5} title="HTML" text="HyperText Markup Language" />
-        <CardComponent icon={FaCss3Alt} title="CSS" text="Cascading Style Sheets" />
-        <CardComponent icon={FaJsSquare} title="JavaScript" text="Scripting language for interactive web pages" />
-        <CardComponent icon={FaReact} title="React" text="JavaScript library for building user interfaces" />
-        <CardComponent icon={FaPython} title="Django" text="Python web framework for rapid development" />
-        <CardComponent icon={FaDatabase} title="SQL" text="Structured Query Language for managing databases" />
-        <CardComponent icon={FaAws} title="AWS" text="Amazon Web Services cloud computing platform" />
-        <CardComponent icon={FaGitAlt} title="Git" text="Version control system for tracking changes" />
+        <CardComponent icon={FaHtml5} title="HTML" text="" />
+        <CardComponent icon={FaCss3Alt} title="CSS" text="" />
+        <CardComponent icon={FaJsSquare} title="JavaScript" text="" />
+        <CardComponent icon={FaReact} title="React" text="" />
+        <CardComponent icon={FaPython} title="Django" text="" />
+        <CardComponent icon={FaDatabase} title="SQL" text="" />
+        <CardComponent icon={FaAws} title="AWS" text="" />
+        <CardComponent icon={FaGitAlt} title="Git" text="" />
       </div>
     </div>
   );
