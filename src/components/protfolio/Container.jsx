@@ -17,20 +17,20 @@ const Container = () => {
         {/* Sidebar and Main Content */}
         <div className="flex flex-col lg:flex-row mt-8 gap-5">
           {/* Sidebar Section */}
-          <aside className="bg-black-800 p-1 rounded-lg shadow-md w-full lg:w-4/ h-auto lg:h-auto">
+          <aside className="bg-black-800  rounded-lg shadow-md w-full lg:w-4/ h-auto lg:h-auto">
             <ProfileSection />
 
             {/* Card Container Below Sidebar */}
-            <div className="mt-6 bg-dark-700 p-4 rounded-lg shadow-md">
+            <div className="mt- bg-dark-700 p-4 rounded-lg shadow-md">
               <h3 className="text-xl font-bold text-white mb-4">My Projects</h3>
-              <div className="grid grid-cols-1 gap-4">
+              <div className="grid grid-cols-1 gap-3">
                 <Projects />
               </div>
             </div>
           </aside>
 
           {/* Main Content Section */}
-          <main className="bg-gray-900 p-8 rounded-lg shadow-md w-full lg:w-8/12 h-auto lg:h-auto">
+          <main className="bg-gray-900 p-3 rounded-lg shadow-md w-full lg:w-8/12 h-auto lg:h-auto">
             {/* Projects Section */}
             <section className="mt-8">
              <ExperienceCard/>

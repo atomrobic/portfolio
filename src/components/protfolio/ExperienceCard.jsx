@@ -54,11 +54,8 @@ const ExperienceCard = () => {
       </div>
 
       {/* Neon Glowing Input Box with Dynamic Placeholder */}
-      <input
-        type="text"
-        placeholder={placeholderText}
-        className="neon-input"
-      />
+      <input type="text" placeholder={placeholderText} className="neon-input" disabled />
+
     </div>
   );
 };

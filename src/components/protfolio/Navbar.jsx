@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Button, Drawer } from 'antd';
 import '../../styles/Navbar.css'; // Import custom CSS for Navbar
 
 const Navbar = () => {
@@ -41,7 +40,7 @@ const Navbar = () => {
             </a>
           </li>
           <li className="navbar-item">
-            <a href="#projects" className="navbar-links" onClick={toggleMobileMenu}>
+            <a href="#Projects" className="navbar-links" onClick={toggleMobileMenu}>
               Projects
             </a>
           </li>
