@@ -9,7 +9,7 @@ const AvatarCustomStyles = () => {
   const [sliderValue, setSliderValue] = useState(0);
   const [showDetails, setShowDetails] = useState(false);
 
-  const resumeLink = '/Akhil.a...pdf';
+  const resumeLink = '/Akhil. (a).pdf';
 
   const handleDownloadClick = () => {
     setLoading(true);
@@ -23,7 +23,7 @@ const AvatarCustomStyles = () => {
         setLoading(false);
         const link = document.createElement('a');
         link.href = resumeLink;
-        link.download = 'Akhil.a...pdf';
+        link.download = '/Akhil. (a).pdf';
         link.click();
       }
     }, 100);

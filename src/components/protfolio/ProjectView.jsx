@@ -4,22 +4,33 @@ const ProjectView = ({ projectId, projectName }) => {
   const [viewCount, setViewCount] = useState(0);
 
   useEffect(() => {
-    // Create a unique key for the project in localStorage
-    const storageKey = `project_${projectId}_viewCount`;
-    const currentCount = parseInt(localStorage.getItem(storageKey)) || 0;
+    if (!projectId) {
+      console.warn("Project ID is missing!");
+      return;
+    }
 
-    // Increment the count
-    const newCount = currentCount + 1;
-    setViewCount(newCount);
+    const storageKey = `project_${projectId}_views`;
 
-    // Save the updated count
-    localStorage.setItem(storageKey, newCount);
+    try {
+      // Ensure we get a valid integer
+      const currentCount = parseInt(localStorage.getItem(storageKey) || "0", 10);
+      console.log(`Previous View Count for ${storageKey}:`, currentCount);
+
+      // Increment and store the new count
+      const newCount = currentCount + 1;
+      localStorage.setItem(storageKey, newCount);
+      setViewCount(newCount);
+
+      console.log(`Updated View Count for ${storageKey}:`, newCount);
+    } catch (error) {
+      console.error("Error accessing localStorage:", error);
+    }
   }, [projectId]);
 
   return (
-    <div className="bg-gray-800 p-4 rounded-lg shadow-md text-white">
-      <h2 className="text-xl font-bold">{projectName}</h2>
-      <p className="mt-2">View Count: {viewCount}</p>
+    <div style={{ backgroundColor: '#1e293b', padding: '1rem', borderRadius: '8px', color: 'white' }}>
+      <h2>{projectName}</h2>
+      <p>View Count: {viewCount}</p>
     </div>
   );
 };
